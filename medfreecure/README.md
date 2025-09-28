@@ -1,7 +1,6 @@
 # Medicine Free Cure Website
 
-A modern, responsive website for Medicine Free Cure - a holistic health platform offering natural blood pressure control through the C.A.L.M routine.
-
+A modern, responsive website for Medicine Free Cure - a holistic health platform.
 ## Tech Stack
 
 - **Frontend**: Next.js 15 with TypeScript
