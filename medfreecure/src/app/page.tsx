@@ -1,5 +1,4 @@
 import Hero from '@/components/Hero'
-import Approach from '@/components/Approach'
 import WhyLearn from '@/components/WhyLearn'
 import WhatYouWillLearn from '@/components/WhatYouWillLearn'
 import AboutDoctor from '@/components/AboutDoctor'
@@ -9,7 +8,6 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <Approach />
       <WhyLearn />
       <WhatYouWillLearn />
       <AboutDoctor />
