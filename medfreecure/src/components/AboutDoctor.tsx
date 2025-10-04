@@ -4,95 +4,87 @@ import Image from 'next/image'
 import { Award, Heart, Users } from 'lucide-react'
 
 export default function AboutDoctor() {
+  const credentials = [
+    { icon: Award, label: "Yoga Teacher" },
+    { icon: Heart, label: "Acupressure Teacher" },
+    { icon: Users, label: "Marma Chikitsak" },
+    { icon: Award, label: "Rakkenho Practitioner" },
+    { icon: Heart, label: "Vastu Vidya Vachaspati" },
+    { icon: Users, label: "Chronic Pain Relief Specialist" },
+  ]
+
   return (
-    <section id="about" className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 bg-gray-900">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        
+        {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            About Me
+          <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">
+            About Dr. Kanaiya S Gupta
           </h2>
+          <p className="text-lg text-gray-300">
+            Meet the mind behind Medicine-Free Healing — restoring health naturally without lifelong medications
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        {/* Grid: Image + Info */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
           {/* Doctor Image */}
-          <div className="text-center lg:text-left">
-            <div className="w-64 h-64 rounded-full mx-auto lg:mx-0 mb-8 overflow-hidden border-4 border-blue-600 shadow-lg">
+          <div className="flex justify-center lg:justify-end">
+            <div className="overflow-hidden rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
               <Image
                 src="/doctor-profile.jpg"
                 alt="Dr. Kanaiya S Gupta"
-                width={350}
-                height={350}
-                className="w-full h-full object-cover object-center"
+                width={400}
+                height={500}
+                className="object-cover w-full h-full"
               />
             </div>
           </div>
 
           {/* Doctor Info */}
           <div className="space-y-6">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Dr. Kanaiya S Gupta
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                For more than two decades, I have dedicated my life to helping
-                people overcome <strong>chronic health problems without lifelong dependence on medicines</strong>.
-                My approach combines India’s ancient healing wisdom with safe,
-                natural, and non-invasive practices that restore balance and
-                vitality.
-              </p>
+            <p className="text-gray-300 leading-relaxed">
+              For over two decades, I have dedicated my life to helping people overcome <strong>chronic health problems without lifelong dependence on medicines</strong>.  
+              My approach combines India’s ancient healing wisdom with safe, natural, and non-invasive practices that restore balance and vitality.
+            </p>
+
+            <p className="text-gray-300 leading-relaxed">
+              I have helped patients with <strong>arthritis, diabetes, chronic pain, heart blockages, stress-related disorders, kidney and liver conditions, migraines, and other long-term illnesses</strong>.  
+              Many found relief, mobility, and renewed health after years of conventional treatment.
+            </p>
+
+            <p className="text-gray-300 leading-relaxed">
+              I believe the human body has an incredible capacity to heal itself when given the right support. My mission is to guide people by restoring health, reducing medications, and helping them live pain-free, fulfilling lives.
+            </p>
+
+            {/* Credentials Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
+              {credentials.map((cred, idx) => (
+                <div
+                  key={idx}
+                  className="bg-gray-800 rounded-2xl p-4 flex items-center justify-center flex-col hover:shadow-2xl transition cursor-default"
+                >
+                  <cred.icon className="w-6 h-6 text-green-600 mb-2" />
+                  <span className="text-gray-300 text-sm font-medium text-center">{cred.label}</span>
+                </div>
+              ))}
             </div>
 
-            <div>
-              <p className="text-gray-600 leading-relaxed">
-                I have worked with patients struggling with <strong>arthritis, diabetes,
-                chronic pain, heart blockages, stress-related disorders, kidney
-                and liver conditions, migraines, and other long-term illnesses</strong>.
-                Many of them came to me after years of conventional treatment and
-                finally found relief, mobility, and renewed health.
-              </p>
+            {/* CTA Button */}
+            <div className="mt-8 text-center lg:text-left">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeFCNehnF6SNX4ZFtBRr5wfI-vTzR0xsVwU84n5H6ylJ5WGyQ/viewform?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl font-semibold shadow-lg transition">
+                  Book a Consultation
+                </button>
+              </a>
             </div>
 
-            <div>
-              <p className="text-gray-600 leading-relaxed">
-                I believe the human body has an incredible capacity to heal
-                itself when given the right support. My mission is to guide
-                people by restoring health, reducing
-                medicines, and helping them live pain-free, fulfilling lives.
-              </p>
-            </div>
-
-            {/* Credentials */}
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">
-                Credentials & Expertise
-              </h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <div className="flex items-center space-x-3">
-                  <Award className="w-4 h-4 text-blue-600" />
-                  <span className="text-gray-700 text-sm">Yoga Teacher</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Heart className="w-4 h-4 text-blue-600" />
-                  <span className="text-gray-700 text-sm">Acupressure Teacher</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Users className="w-4 h-4 text-blue-600" />
-                  <span className="text-gray-700 text-sm">Marma Chikitsak</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Award className="w-4 h-4 text-blue-600" />
-                  <span className="text-gray-700 text-sm">Rakkenho Practitioner</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Heart className="w-4 h-4 text-blue-600" />
-                  <span className="text-gray-700 text-sm">Vastu Vidya Vachaspati</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Users className="w-4 h-4 text-blue-600" />
-                  <span className="text-gray-700 text-sm">Chronic Pain Relief Specialist</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

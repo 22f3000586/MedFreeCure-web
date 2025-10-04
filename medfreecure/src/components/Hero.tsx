@@ -33,9 +33,10 @@ export default function Hero() {
                 </button>
               </a>
 
-              <a href="https://wa.me/917317312985" target="_blank" rel="noopener noreferrer">
-                <button className="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-full shadow-lg font-semibold">
-                  Chat on WhatsApp
+              <a href="#approach">
+                <button className="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-full shadow-lg font-semibold flex items-center gap-2">
+                  Discover Our Approach
+                  <ArrowRight className="w-5 h-5" />
                 </button>
               </a>
             </div>

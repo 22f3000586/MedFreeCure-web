@@ -62,14 +62,14 @@ export default function Testimonials() {
   }
 
   return (
-    <section id="testimonials" className="py-20 bg-white">
+    <section id="testimonials" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-4">
             Testimonials & Awards
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real stories from real people who have transformed their lives with our C.A.L.M routine.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Real stories from real people who have transformed their lives.
           </p>
         </div>
 
@@ -77,10 +77,10 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-shadow"
             >
               <div className="flex items-center mb-4">
-                <Quote className="w-8 h-8 text-primary-600 mr-2" />
+                <Quote className="w-8 h-8 text-yellow-400 mr-2" />
                 <div className="flex">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -89,15 +89,15 @@ export default function Testimonials() {
               </div>
 
               <div className="mb-4">
-                <h4 className="font-semibold text-gray-900 mb-1">
+                <h4 className="font-semibold text-white mb-1">
                   {testimonial.name}
                 </h4>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-300">
                   {testimonial.location}
                 </p>
               </div>
 
-              <div className="text-gray-700 mb-4">
+              <div className="text-gray-300 mb-4">
                 <p className="text-sm">
                   "{expandedTestimonial === index 
                     ? testimonial.fullText 

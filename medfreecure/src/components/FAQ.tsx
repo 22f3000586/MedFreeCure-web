@@ -60,7 +60,7 @@ export default function FAQ() {
   }
 
   return (
-    <section id="faq" className="py-16 bg-gray-50">
+    <section id="faq" className="py-16 bg-gray-900">
       <Head>
         <script
           type="application/ld+json"
@@ -69,17 +69,17 @@ export default function FAQ() {
       </Head>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-10">
           Frequently Asked Questions
         </h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md p-4 transition-all duration-200"
+              className="bg-gray-800 rounded-lg shadow-md p-4 transition-all duration-200"
             >
               <button
-                className="flex justify-between items-center w-full text-left font-medium text-gray-900"
+                className="flex justify-between items-center w-full text-left font-medium text-white"
                 onClick={() =>
                   setOpenIndex(openIndex === index ? null : index)
                 }
@@ -92,7 +92,7 @@ export default function FAQ() {
                 />
               </button>
               {openIndex === index && (
-                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+                <p className="mt-3 text-gray-300 text-sm leading-relaxed">
                   {faq.answer}
                 </p>
               )}
